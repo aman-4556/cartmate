@@ -9,11 +9,11 @@ exports.sanitizeUser = (user) => {
 };
 
 exports.cookieExtractor = function (req) {
-  var token = null;
+  let token = null;
   if (req && req.cookies) {
     token = req.cookies['jwt'];
   }
   //TODO : this is temporary token for testing without cookie
- // token ="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2NmMxMzRjMTVjODNlNjNmM2FjY2FlMSIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTcxODM2Nzk0Mn0.3aN6N7BRE6BW9HYTRv5y3BkXdQ2k3z31A9zbYGcCpEQ"
+  // token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0NWJmNzViOWI3OWFkMTNiMTUxNWQ0MCIsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNjgzNzQ4ODY3fQ.DyMEFgayuvUGrzvPHIxmCJWi4xstvp4hR-dRSBjRNhE"
   return token;
 };
